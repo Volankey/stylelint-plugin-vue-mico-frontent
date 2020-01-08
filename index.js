@@ -55,12 +55,12 @@ function handleNodeFn(namespace, context) {
   return function _handleNode(root, result) {
     let hasFixed = false
     root.walkRules(rule => {
-      console.log('TCL: returnfunction_handleNode -> root', root)
+      //console.log('TCL: returnfunction_handleNode -> root', root)
       const _selector = rule.selector
       const selectors = _selector.split(',')
 
       selectors.forEach((selector, idx) => {
-        console.log('TCL: returnfunction_handleNode -> selector', selector)
+        //console.log('TCL: returnfunction_handleNode -> selector', selector)
         const preLength = idx > 0 ? selectors[idx - 1].length + 1 : 0
         // selector = replaceSpace(selector);
         // 不含有命名空间要做处理
